@@ -2,11 +2,11 @@
   "name": "Lucecilla",
   "device_id": "lucecilla",
   "wifi": {
-    "ssid": "Oscuro24",
-    "password": "Tp/Fr3dd&613*"
+    "ssid": "64845183",
+    "password": "527A67F053BAD"
   },
   "mqtt": {
-    "host": "192.168.0.114",
+    "host": "192.168.0.11",
     "port": 1883,
     "base_topic": "homie/",
     "auth": false

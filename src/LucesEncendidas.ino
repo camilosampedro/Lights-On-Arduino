@@ -1,6 +1,6 @@
 #include <Homie.h>
 
-const int PIN_RELAY = D1;
+const int PIN_RELAY = D5;
 
 HomieNode lightNode("light", "switch");
 
@@ -23,7 +23,7 @@ bool lightOnHandler(String value) {
 void setup() {
   Serial.begin(115200);
   pinMode(PIN_RELAY, OUTPUT);
-  digitalWrite(PIN_RELAY, LOW);
+  digitalWrite(PIN_RELAY, HIGH);
 
   Homie.setFirmware("awesome-relay", "1.0.0");
   lightNode.subscribe("on", lightOnHandler);
@@ -33,4 +33,6 @@ void setup() {
 
 void loop() {
   Homie.loop();
+
+  // Homie.setNodeProperty(lightNode, "on", "true"); // Update the state of the light
 }
